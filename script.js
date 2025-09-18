@@ -30,7 +30,7 @@ if (quizForm) {
 // === Senha secreta (segredo.html) ===
 function verificarSenha() {
   const senha = document.getElementById("senhaInput").value;
-  if (senha === "30092025") { // troque pela senha real
+  if (senha === "30092024") { // troque pela senha real
     document.getElementById("mensagemSecreta").style.display = "block";
   } else {
     alert("Senha errada! Tente de novo 😉");
