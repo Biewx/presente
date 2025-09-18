@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nossas Memórias 📸</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .carousel-img {
+      transition: opacity 0.5s;
+    }
+  </style>
+</head>
+<body class=" bg-gray-900 font-sans text-center min-h-screen">
+  <div class="w-16 h-10 bg-pink-600 rounded-2xl my-5 ml-4 flex items-center justify-center">
+    <a href="index.html" title="Voltar para o início" class="block w-full h-full">
+      <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M5 1H4L0 5L4 9H5V6H11C12.6569 6 14 7.34315 14 9C14 10.6569 12.6569 12 11 12H4V14H11C13.7614 14 16 11.7614 16 9C16 6.23858 13.7614 4 11 4H5V1Z" fill="#000000"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+  <div class="grid grid-cols-2">
+  <div>
+  <section class="p-8">
+    <h1 class="text-4xl font-bold text-pink-300 mb-6">Nossas Memórias 📷</h1>
+    <div class="flex flex-col items-center justify-center">
+      <div class="w-full max-w-md">
+  <img id="carousel-img" class="carousel-img rounded-xl shadow-lg w-full max-w-3xl h-[32rem] object-contain bg-black" src="img/Nois/20250518_181334.jpg" alt="Foto nossa">
+      </div>
+      <p id="carousel-alt" class="mt-4 text-pink-200 text-lg"></p>
+    </div>
+  </section>
+  <script>
+    const imagens = [
+      'img/Nois/20250518_181334.jpg',
+      'img/Nois/20250814_164912.jpg',
+      'img/Nois/20250817_174733.jpg',
+      'img/Nois/20250823_232957.jpg',
+      'img/Nois/20250823_234917.jpg',
+      'img/Nois/IMG-20250227-WA0060.jpg',
+      'img/Nois/IMG-20250306-WA0070.jpg',
+      'img/Nois/IMG-20250425-WA0054.jpg',
+      'img/Nois/IMG-20250913-WA0013.jpg',
+      'img/Nois/IMG-20250914-WA0181.jpg',
+      'img/Nois/IMG-20250916-WA0232.jpg',
+      'img/Nois/IMG-20250916-WA0233.jpg',
+      'img/Nois/IMG_20250227_122139_043.jpg',
+      'img/Nois/IMG_20250814_175748_503.jpg'
+    ];
+    let idx = 0;
+    const imgEl = document.getElementById('carousel-img');
+    const altEl = document.getElementById('carousel-alt');
+    function mostrarImagem(i) {
+      imgEl.style.opacity = 0;
+      setTimeout(() => {
+        imgEl.src = imagens[i];
+        imgEl.alt = '';
+        altEl.textContent = '';
+        imgEl.style.opacity = 1;
+      }, 300);
+    }
+    mostrarImagem(idx);
+    setInterval(() => {
+      idx = (idx + 1) % imagens.length;
+      mostrarImagem(idx);
+    }, 3000);
+  </script>
+  </div>
+  <div>
+  <section class="p-8">
+    <h1 class="text-4xl font-bold text-pink-300 mb-6">A menina mais bonita do mundo 💖</h1>
+    <div class="flex flex-col items-center justify-center">
+      <div class="w-full max-w-md">
+        <img id="carousel-ela-img" class="carousel-img rounded-xl shadow-lg w-full max-w-3xl h-[32rem] object-contain bg-black" src="img/ELa/20250824_011930.jpg" alt="Foto dela">
+      </div>
+      <p id="carousel-ela-alt" class="mt-4 text-pink-200 text-lg"></p>
+    </div>
+  </section>
+  <script>
+    const imagensEla = [
+      'img/ELa/20250824_011930.jpg',
+      'img/ELa/IMG-20240830-WA0048.jpg',
+      'img/ELa/IMG-20240904-WA0017.jpg',
+      'img/ELa/IMG-20240927-WA0050.jpg',
+      'img/ELa/IMG-20241126-WA0053.jpg',
+      'img/ELa/IMG-20241130-WA0011.jpg',
+      'img/ELa/IMG-20241215-WA0041.jpg',
+      'img/ELa/IMG-20241215-WA0043.jpg',
+      'img/ELa/IMG-20250103-WA0086.jpg',
+      'img/ELa/IMG-20250402-WA0051.jpg',
+      'img/ELa/IMG-20250403-WA0028.jpg',
+      'img/ELa/IMG-20250430-WA0071.jpg',
+      'img/ELa/IMG-20250504-WA0020.jpg',
+      'img/ELa/IMG-20250803-WA0013.jpg',
+      'img/ELa/IMG-20250803-WA0072.jpg',
+      'img/ELa/IMG-20250914-WA0176.jpg',
+      'img/ELa/IMG-20250916-WA0235.jpg',
+      'img/ELa/IMG-20250916-WA0289.jpg',
+      'img/ELa/IMG_20250714_223213_302.webp'
+    ];
+    let idxEla = 0;
+    const imgElaEl = document.getElementById('carousel-ela-img');
+    const altElaEl = document.getElementById('carousel-ela-alt');
+    function mostrarImagemEla(i) {
+      imgElaEl.style.opacity = 0;
+      setTimeout(() => {
+        imgElaEl.src = imagensEla[i];
+        imgElaEl.alt = '';
+        altElaEl.textContent = '';
+        imgElaEl.style.opacity = 1;
+      }, 300);
+    }
+    mostrarImagemEla(idxEla);
+    setInterval(() => {
+      idxEla = (idxEla + 1) % imagensEla.length;
+      mostrarImagemEla(idxEla);
+    }, 3000);
+  </script>
+  </div>
+  </div>
+</body>
+</html>
