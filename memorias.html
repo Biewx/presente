@@ -23,7 +23,7 @@
       </svg>
     </a>
   </div>
-  <div class="grid grid-cols-2">
+  <div class="">
   <div>
   <section class="p-8">
     <h1 class="text-4xl font-bold text-pink-300 mb-6">Nossas Memórias 📷</h1>
@@ -70,57 +70,7 @@
     }, 3000);
   </script>
   </div>
-  <div>
-  <section class="p-8">
-    <h1 class="text-4xl font-bold text-pink-300 mb-6">A menina mais bonita do mundo 💖</h1>
-    <div class="flex flex-col items-center justify-center">
-      <div class="w-full max-w-md">
-        <img id="carousel-ela-img" class="carousel-img rounded-xl shadow-lg w-full max-w-3xl h-[32rem] object-contain bg-black" src="img/ELa/20250824_011930.jpg" alt="Foto dela">
-      </div>
-      <p id="carousel-ela-alt" class="mt-4 text-pink-200 text-lg"></p>
-    </div>
-  </section>
-  <script>
-    const imagensEla = [
-      'img/ELa/20250824_011930.jpg',
-      'img/ELa/IMG-20240830-WA0048.jpg',
-      'img/ELa/IMG-20240904-WA0017.jpg',
-      'img/ELa/IMG-20240927-WA0050.jpg',
-      'img/ELa/IMG-20241126-WA0053.jpg',
-      'img/ELa/IMG-20241130-WA0011.jpg',
-      'img/ELa/IMG-20241215-WA0041.jpg',
-      'img/ELa/IMG-20241215-WA0043.jpg',
-      'img/ELa/IMG-20250103-WA0086.jpg',
-      'img/ELa/IMG-20250402-WA0051.jpg',
-      'img/ELa/IMG-20250403-WA0028.jpg',
-      'img/ELa/IMG-20250430-WA0071.jpg',
-      'img/ELa/IMG-20250504-WA0020.jpg',
-      'img/ELa/IMG-20250803-WA0013.jpg',
-      'img/ELa/IMG-20250803-WA0072.jpg',
-      'img/ELa/IMG-20250914-WA0176.jpg',
-      'img/ELa/IMG-20250916-WA0235.jpg',
-      'img/ELa/IMG-20250916-WA0289.jpg',
-      'img/ELa/IMG_20250714_223213_302.webp'
-    ];
-    let idxEla = 0;
-    const imgElaEl = document.getElementById('carousel-ela-img');
-    const altElaEl = document.getElementById('carousel-ela-alt');
-    function mostrarImagemEla(i) {
-      imgElaEl.style.opacity = 0;
-      setTimeout(() => {
-        imgElaEl.src = imagensEla[i];
-        imgElaEl.alt = '';
-        altElaEl.textContent = '';
-        imgElaEl.style.opacity = 1;
-      }, 300);
-    }
-    mostrarImagemEla(idxEla);
-    setInterval(() => {
-      idxEla = (idxEla + 1) % imagensEla.length;
-      mostrarImagemEla(idxEla);
-    }, 3000);
-  </script>
-  </div>
+ 
   </div>
 </body>
 </html>
